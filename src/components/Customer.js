@@ -1,4 +1,6 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 // Customer 컴포는터는 한명의 고객에 대한 정보를 출력한다.
 
@@ -7,10 +9,14 @@ class Customer extends React.Component{
 //{this.props.프롭스이름} 식으로 불러오면 된다. 불러온 props를 하위 컴포넌트에게 전달 할 수 있다.
     render(){
         return(
-            <div>
-                <CustomerProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
-                <CustomerInfo birthday={this.props.birthday} gender={this.props.gender} occupation={this.props.occupation}/>
-            </div>
+            <TableRow>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell><img src={this.props.image} alt='profile'/></TableCell>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell>{this.props.birthday}</TableCell>
+                <TableCell>{this.props.gender}</TableCell>
+                <TableCell>{this.props.occupation}</TableCell>
+            </TableRow>
         )
     };
 }
