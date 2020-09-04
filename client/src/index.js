@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//컴포넌트를 모아(?) 화면에 렌더링을 해주는 코드
 ReactDOM.render(
   <React.StrictMode>
     <App />
